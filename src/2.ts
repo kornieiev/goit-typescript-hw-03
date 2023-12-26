@@ -36,14 +36,12 @@ class Employee {
 }
 
 class Manager extends Employee {
-  // Реалізуйте конструктор та збільшіть salary на 10000
-  public changeSalary(value: number): number {
-    return this.salary + value;
+  constructor(name, department, salary) {
+    super(name, department, salary + 10000);
   }
 }
 
 const someManager = new Manager("Vasia", "commercial", 5000);
+console.log(someManager);
 
-console.log(someManager.changeSalary(10000));
-
-export { Manager, someManager };
+export { Manager };
